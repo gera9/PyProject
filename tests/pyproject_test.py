@@ -1,6 +1,6 @@
 from unittest import main, mock, IsolatedAsyncioTestCase
 from main import PyProject
-from test_cases import (save_artist_test_cases,
+from .test_cases import (save_artist_test_cases,
                         get_tracks_by_album_id_test_cases,
                         search_artist_test_cases,
                         get_album_by_artist_id_test_cases,
