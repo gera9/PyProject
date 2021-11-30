@@ -47,7 +47,7 @@ class MongoStorage(Storage):
         new_values = {"$set": artist_to_dict(artist)}
         return bool(self.__connection.update_one(update_filter, new_values))
 
-    def get_one(self, get_one_filter: dict) -> Artist | None:
+    def get_one(self, get_one_filter: dict) -> Artist:
         artist = self.__connection.find_one(filter=get_one_filter)
         if not artist:
             return None
