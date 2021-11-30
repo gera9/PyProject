@@ -3,8 +3,7 @@ python:
   - "3.9"
 install:
   - pip install -r requirements.txt
-script:
-  - python -m unittest tests/pyproject_test.py  
+script:  
   - python -m unittest tests/integration_tests/app_test.py
 env:
   - API_KEY=219443a8c934ba42eef1d50c72a3b725
