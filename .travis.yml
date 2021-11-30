@@ -5,6 +5,7 @@ install:
   - pip install -r requirements.txt
 script:  
   - python -m unittest tests/integration_tests/app_test.py
+  - python -m unittest tests/pyproject_test.py
 env:
   - API_KEY=219443a8c934ba42eef1d50c72a3b725
   - MONGO_URI=mongodb://localhost:27017/?readPreference=primary&appname=MongoDB%20Compass&directConnection=true&ssl=false
