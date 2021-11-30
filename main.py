@@ -136,19 +136,18 @@ async def menu(app: PyProject) -> None:
 
         u_selection = int(input('-> '))
 
-        match u_selection:
-            case 1:
+        if u_selection == 1:
                 result = await app.search_artists()
                 print(result)
-            case 2:
-                artists = await app.show_artists()
-                for i in range(len(artists)):
-                    print(f'{i+1}.- {artists[i].__dict__}')
-            case 3:
-                result = await app.delete_artist()
-                print(result)
-            case _:
-                return
+        elif u_selection == 2:
+            artists = await app.show_artists()
+            for i in range(len(artists)):
+                print(f'{i+1}.- {artists[i].__dict__}')
+        elif u_selection == 3:
+            result = await app.delete_artist()
+            print(result)
+        else:
+            return
 
 
 def main() -> None:
