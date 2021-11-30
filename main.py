@@ -124,7 +124,7 @@ class PyProject(object):
     async def get_album_by_artist_id(self, artist_id: int) -> list:
         return self.api.get_album_by_artist_id(artist_id=artist_id)
 
-    async def get_tracks_by_allbum_id(self, album_id: int) -> list | None:
+    async def get_tracks_by_allbum_id(self, album_id: int) -> list:
         return self.api.get_tracks_by_album(album_id=album_id, page=1, page_size=5)
 
 
