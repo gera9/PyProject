@@ -138,7 +138,7 @@ search_artist_test_cases = [
                     "artist_twitter_url": "http:\/\/twitter.com\/THE_PRODIGY",
                     "updated_time": "2011-06-15T10:23:33Z"
                 }
-            },
+        },
 
     }
 ]
@@ -553,21 +553,21 @@ search_artists_test_cases = [
         ],
         'expected_output': 'Done!'
     },
-{
+    {
         'name': 'Case 2 ArtistNotFound error',
         'input': ['cdncjds', 1, 5, 'y', 'y'],
         'expected_raise': True,
         'mocks': [[], [], []],
         'expected_output': 'Done!',
     },
-{
+    {
         'name': 'Case 3 AlbumNotFound error',
         'input': ['PorcupineTree', 1000, 5, 'y', 'y'],
         'expected_raise': True,
         'mocks': [[], [], []],
         'expected_output': 'Done!',
     },
-{
+    {
         'name': 'Case 4 IndexError error',
         'input': ['PorcupineTree', 1, 500, 'y', 'y'],
         'expected_raise': True,
@@ -615,7 +615,7 @@ show_artists_test_cases = [
         ],
         'mocks':[
             [
-Artist(
+                Artist(
                     artist_id=8274,
                     artist_name='Porcupine Tree',
                     artist_country='GB',
